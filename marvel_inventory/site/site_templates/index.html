@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% with message = get_flashed_messages(with_categories = true) %}
+    {% if message %}
+        {% for cat, msg in message %}
+            {% if cat == 'user-created' %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ msg }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            
+            {% elif cat == 'auth-success' %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ msg }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="container">
+    <header class="row">
+        <div class="col-12 col-md-6" id="header-text">
+            <h2>MARVEL CHARACTERS</h2>
+            <h5>
+                Get hooked on a hearty helping of heroes from the humble House of Ideas!
+            </h5>
+        </div>
+    <!--  Header Image Here-->   
+        <!-- <div class="col-12 col-md-6">
+            <img src="../../static/images/ladyandcars.svg" alt="Header Image" class="header-image">
+        </div> -->
+    </header>
+    
+    <section class="row" id="features-section">
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/Black_Widow_Vol_5_13_Textless.jpg" alt="WIDOW image" id="widow-image">
+            <h4>BLACK WIDOW</h4>
+            <p>
+                A former KGB agent, Natalia Romanova otherwise known as Black Widow defected to the
+                United States from the Soviet Union (later known as Russia) to join S.H.I.E.L.D..
+            </p>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/Captain_America_Vol_7_22_Marvel_Comics_75th_Anniversary_Variant_Textless.jpg" alt="Cap Image" id="cap-image">
+            <h4>CAPTAIN AMERICA</h4>
+            <p>
+                During the dark days of the early 1940's, a covert U.S. Military experiment turned 
+                Steve Rogers into America's first Super-Soldier, Captain America.
+            </p>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/Hawkeye_Vol_4_2_Textless.jpg" alt="Hawkeye Image" id="hawkeye=image">
+            <h4>HAWKEYE</h4>
+            <p>
+                Clinton Barton was a former circus worker and criminal-turned-hero, who received his 
+                archery skills as a young boy through training with Swordsman and Trickshot. 
+                Barton would eventually join both the East Coast and West Coast branches of The Avengers, 
+                even leading at one time. 
+            </p>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/Savage_Hulk_Vol_2_1_Marvel_Comics_75th_Anniversary_Variant_Textless.jpg" alt="Hulk image" id="hulk-image">
+            <h4>HULK</h4>
+            <p>
+                A former KGB agent, Natalia Romanova otherwise known as Black Widow defected to the
+                United States from the Soviet Union (later known as Russia) to join S.H.I.E.L.D..
+            </p>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/Superior_Iron_Man_Vol_1_1_Marvel_Comics_75th_Anniversary_Variant_Textless.jpg" alt="Iron Man Image" id="ironman-image">
+            <h4>IRON MAN</h4>
+            <p>
+                Genius billionaire inventor, industrialist and CEO of Stark Industries Tony Stark was 
+                fatally wounded in a war zone in Afghanistan shortly before being kidnapped by terrorists. 
+                Stark built an armored suit to escape captivity, which doubled as a device to keep his 
+                heart beating keeping him alive. Once he returned to the United States, Stark reinvented 
+                himself as the armor-clad superhero Iron Man.
+            </p>
+        </div>
+
+        <div class="col-12 col-md-4">
+            <img src="../../static/images/Thor_Vol_4_1_Ross_Variant_Textless.jpg" alt="Thor Image" id="thor=image">
+            <h4>THOR</h4>
+            <p>
+                Leaping from the legends of Norse mythology, the Asgardian God of Thunder, Thor Odinson, 
+                is the son of Odin the All-Father and Jord, Elder Goddess and spirit of the Earth. 
+                He frequently stands alongside the Avengers in the defense of the people of Midgard (Earth), 
+                often against the schemes of his adopted brother Loki.
+            </p>
+        </div>
+    </section>
+    
+    <section class="row">
+        <div class="col-12 col-md-6">
+            <img src="../../static/images/" alt="Avengers Image" id="avengers-image">
+        </div>
+
+        <div class="col-12 col-md-6">
+            <h4>Check Out Our collection!</h4>
+            <P>
+                You can harness the power of our various car research tools!
+            </P>
+        </div>
+    </section>
+    
+    <footer class="row" id="footer">
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <img src="../../static/images/unnamed.jpg" alt="WMarvel Logo" id="wmarvel-logo">
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>EXPLORE PROPERTIES</h4>
+                <p>ABOUT MARVEL</p>
+                <p>HELP/FAQS</p>
+                <p>CAREERS</p>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>EXPLORE PROPERTIES</h4>
+                <p>ABOUT MARVEL</p>
+                <p>HELP/FAQS</p>
+                <p>CAREERS</p>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>EXPLORE PROPERTIES</h4>
+                <p>ABOUT MARVEL</p>
+                <p>HELP/FAQS</p>
+                <p>CAREERS</p>
+            </div>
+        </div>
+        <div class="col-2 col-md-2">
+            <div class="footer-text-flex">
+                <h4>EXPLORE PROPERTIES</h4>
+                <p>ABOUT MARVEL</p>
+                <p>HELP/FAQS</p>
+                <p>CAREERS</p>
+            </div>
+        </div>
+    </footer>
+</div>
+
+{% endblock content %}
